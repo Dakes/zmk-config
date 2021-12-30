@@ -53,7 +53,7 @@
         };
     };
 
-keymap {
+    keymap {
         compatible = "zmk,keymap";
 
 
@@ -82,10 +82,11 @@ keymap {
 //                         |   GUI     |    ALT    | TAB/MOUSE | # | SPACE/SYM |   BSPC   |   DEL    |
 
             bindings = <
-&trans  &kp X       &kp V       &kp L          &kp C          &kp W                &kp K          &kp H        &kp G       &kp F      &kp Q        &trans
-&trans  &mt LGUI U  &mt LALT I  &mt LCTRL A    &mt LSHFT E    &kp O                &kp S          &mt LSHFT N  &mt LCTRL R &mt LALT T &mt LGUI D   &trans
-&trans  &kp DE_Y    &kp DE_SS   &kp DE_AE      &kp P          &kp DE_Z             &kp B          &kp M        &kp CMMA    &kp DOT    &kp J        &trans
-                                &kp LGUI       &kp LALT       &lt NAV_NUM SPACE    &lt SYM ENTER  &kp BSPC     &kp DEL            >;
+&trans  &kp X       &kp V      &kp L       &kp C       &kp W             &kp K         &kp H       &kp G       &kp F      &kp Q      &trans
+&trans  &mt LGUI U  &mt LALT I &mt LCTRL A &mt LSHFT E &kp O             &kp S         &mt LSHFT N &mt LCTRL R &mt LALT T &mt LGUI D &trans
+&trans  &kp DE_Y    &kp DE_SS  &kp DE_AE   &kp P       &kp DE_Z          &kp B         &kp M       &kp CMMA    &kp DOT    &kp J      &trans
+                               &kp LGUI    &kp LALT    &lt NAV_NUM SPACE &lt SYM ENTER &kp BSPC    &kp DEL
+                >;
         };
 
         symbols {
