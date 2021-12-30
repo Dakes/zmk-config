@@ -58,12 +58,12 @@
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |#|                   |  Y   |  U    |  I    |  O   |   P   |   Ü   |
 // | LSHFT |  A  |  S  |  D   |  F   |  G   |                   |#|                   |  H   |  J    |  K    |  L   |   Ö   |Ä/RSHFT|
 // | LCTRL |  Z  |  X  |  C   |  V   |  B   |   ESC   | L SHIFT |#|    F5   | L SHIFT |  N   |  M    |  ,    |  .   |  - _  |ß/RCTRL|
-//                     | ---  | LGUI | LALT | RET/sym |SPACE/num|#| RET/num |SPACE/sym| BSPC | DEL   |  ---  |
+//                     | NEO  | LGUI | LALT | RET/sym |SPACE/num|#| RET/num |SPACE/sym| BSPC | DEL   |  ---  |
             bindings = <
 &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T                                    /**/                                  &kp Y          &kp U        &kp I         &kp O        &kp P          &kp DE_UE
 &kp LSHFT &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G                                    /**/                                  &kp H          &mt LSHFT J  &mt LCTRL K   &mt LALT L   &mt LGUI DE_OE &mt RSHFT DE_AE
-&kp LCTRL &kp Z      &kp X      &kp C       &kp V       &kp B     &kp LSHFT   &kp LSHFT          /**/  &kp LSHFT        &kp LSHFT      &kp N          &kp M        &kp COMMA     &kp DOT      &kp DE_MINUS   &mt RCTRL DE_SS
-                                &tog NEO    &kp LGUI    &kp RET   &lt SYM RET &lt NAV_NUM SPACE  /**/  &lt NAV_NUM RET  &lt SYM SPACE  &kp TAB        &kp BSPC     &kp RALT
+&kp LCTRL &kp Z      &kp X      &kp C       &kp V       &kp B     &kp ESC     &kp LSHFT          /**/  &kp F5           &kp LSHFT      &kp N          &kp M        &kp COMMA     &kp DOT      &kp DE_MINUS   &mt RCTRL DE_SS
+                                &tog NEO    &kp LGUI    &kp RET   &lt SYM RET &lt NAV_NUM SPACE  /**/  &lt NAV_NUM RET  &lt SYM SPACE  &kp BSPC       &kp DEL      &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -73,14 +73,14 @@
 // | TAB |  X   |  V   |   L   |   C   |    W    |                   |#|                   |    K    |   H   |   G   |  F  |  Q   |   ß   |
 // |LSHFT|U/LGUI|I/LALT|A/LCTRL|E/LSHFT|    O    |                   |#|                   |    S    |N/LSHFT|R/LCTRL|/LALT|D/LGUI|Y/RSHFT|
 // |LCTRL|   Ü  |   Ö  |   Ä   |   P   |    Z    |   ESC   | L SHIFT |#|    F5   | L SHIFT |    B    |    M  |   ,   | .   |  J   |-_/RCtl|
-//                     | ---   |  LGUI |  LALT   | RET/sym |SPACE/num|#| RET/num |SPACE/sym|  BSPC   |  DEL  |  ---  |
+//                     | QWERTZ|  LGUI |  LALT   | RET/sym |SPACE/num|#| RET/num |SPACE/sym|  BSPC   |  DEL  |  ---  |
 
 
             bindings = <
-&kp TAB    &kp X       &kp V      &kp L       &kp C       &kp W                                    /**/                                  &kp K   &kp H       &kp G       &kp F      &kp Q      &kp DE_SS
-&kp LSHFT  &mt LGUI U  &mt LALT I &mt LCTRL A &mt LSHFT E &kp O                                    /**/                                  &kp S   &mt LSHFT N &mt LCTRL R &mt LALT T &mt LGUI D &mt RSHFT DE_Y
-&kp LCTRL  &kp DE_UE   &kp DE_OE  &kp DE_AE   &kp P       &kp DE_Z  &kp LSHFT   &kp LSHFT          /**/  &kp LSHFT        &kp LSHFT      &kp B   &kp M       &kp CMMA    &kp DOT    &kp J      &mt RCTRL DE_MINUS
-                                  &tog NEO    &kp LGUI    &kp RET   &lt SYM RET &lt NAV_NUM SPACE  /**/  &lt NAV_NUM RET  &lt SYM SPACE  &kp TAB &kp BSPC    &kp RALT
+&kp TAB    &kp X       &kp V      &kp L       &kp C       &kp W                                    /**/                                  &kp K    &kp H       &kp G       &kp F      &kp Q      &kp DE_SS
+&kp LSHFT  &mt LGUI U  &mt LALT I &mt LCTRL A &mt LSHFT E &kp O                                    /**/                                  &kp S    &mt LSHFT N &mt LCTRL R &mt LALT T &mt LGUI D &mt RSHFT DE_Y
+&kp LCTRL  &kp DE_UE   &kp DE_OE  &kp DE_AE   &kp P       &kp DE_Z  &kp LSHFT   &kp LSHFT          /**/  &kp F5           &kp LSHFT      &kp B    &kp M       &kp CMMA    &kp DOT    &kp J      &mt RCTRL DE_MINUS
+                                  &tog NEO    &kp LGUI    &kp RET   &lt SYM RET &lt NAV_NUM SPACE  /**/  &lt NAV_NUM RET  &lt SYM SPACE  &kp BSPC &kp DEL     &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
