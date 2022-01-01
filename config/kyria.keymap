@@ -57,12 +57,12 @@
 // ----------------------------------------------------------------------------------------------------------------------------------
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |#|                   |  Y   |  U    |  I    |  O   |   P   |   Ü   |
 // | LSHFT |  A  |  S  |  D   |  F   |  G   |                   |#|                   |  H   |  J    |  K    |  L   |   Ö   |Ä/RSHFT|
-// | LCTRL |  Z  |  X  |  C   |  V   |  B   |   ESC   | L SHIFT |#|    F5   | L SHIFT |  N   |  M    |  ,    |  .   |  - _  |ß/RCTRL|
-//                     | NEO  | LGUI | LALT | RET/sym |SPACE/num|#| RET/num |SPACE/sym| BSPC | DEL   |  ---  |
+// | LCTRL |  Z  |  X  |  C   |  V   |  B   |   ESC   |  NEO    |#|    F5   | L SHIFT |  N   |  M    |  ,    |  .   |  - _  |ß/RCTRL|
+//                     | Play | LGUI | LALT | RET/sym |SPACE/num|#| RET/num |SPACE/sym| BSPC | DEL   |  ---  |
             bindings = <
 &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T                                    /**/                                  &kp Y          &kp U        &kp I         &kp O        &kp P          &kp DE_UE
 &kp LSHFT &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G                                    /**/                                  &kp H          &mt LSHFT J  &mt LCTRL K   &mt LALT L   &mt LGUI DE_OE &mt RSHFT DE_AE
-&kp LCTRL &kp Z      &kp X      &kp C       &kp V       &kp B     &kp ESC        &tog NEO        /**/  &kp F5           &kp LSHFT      &kp N          &kp M        &kp COMMA     &kp DOT      &kp DE_MINUS   &mt RCTRL DE_SS
+&kp LCTRL &kp Z      &kp X      &kp C       &kp V       &kp B     &kp ESC        &tog NEO        /**/  &kp F5           &kp F5         &kp N          &kp M        &kp COMMA     &kp DOT      &kp DE_MINUS   &mt RCTRL DE_SS
                                 &kp K_PP    &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &lt NAV_NUM RET  &lt SYM SPACE  &kp BSPC       &kp DEL      &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -72,14 +72,14 @@
 // --------------------------------------------------------------------------------------------------------------------------------
 // | TAB |  X   |  V   |   L   |   C   |    W    |                   |#|                   |    K    |   H   |   G   |  F  |  Q   |   ß   |
 // |LSHFT|U/LGUI|I/LALT|A/LCTRL|E/LSHFT|    O    |                   |#|                   |    S    |N/LSHFT|R/LCTRL|/LALT|D/LGUI|Y/RSHFT|
-// |LCTRL|   Ü  |   Ö  |   Ä   |   P   |    Z    |   ESC   | L SHIFT |#|    F5   | L SHIFT |    B    |    M  |   ,   | .   |  J   |-_/RCtl|
-//                     | QWERTZ|  LGUI |  LALT   | RET/sym |SPACE/num|#| RET/num |SPACE/sym|  BSPC   |  DEL  |  ---  |
+// |LCTRL|   Ü  |   Ö  |   Ä   |   P   |    Z    |   ESC   | QWERTZ  |#|    F5   |    Y    |    B    |    M  |   ,   | .   |  J   |-_/RCtl|
+//                     | Play  |  LGUI |  LALT   | RET/sym |SPACE/num|#| RET/num |SPACE/sym|  BSPC   |  DEL  |  ---  |
 
 
             bindings = <
 &kp TAB    &kp X       &kp V      &kp L       &kp C       &kp W                                    /**/                                  &kp K    &kp H       &kp G       &kp F      &kp Q      &kp DE_SS
 &kp LSHFT  &mt LGUI U  &mt LALT I &mt LCTRL A &mt LSHFT E &kp O                                    /**/                                  &kp S    &mt LSHFT N &mt LCTRL R &mt LALT T &mt LGUI D &mt RSHFT DE_Y
-&kp LCTRL  &kp DE_UE   &kp DE_OE  &kp DE_AE   &kp P       &kp DE_Z  &kp ESC     &tog NEO           /**/  &kp F5           &kp LSHFT      &kp B    &kp M       &kp CMMA    &kp DOT    &kp J      &mt RCTRL DE_MINUS
+&kp LCTRL  &kp DE_UE   &kp DE_OE  &kp DE_AE   &kp P       &kp DE_Z   &kp ESC       &tog NEO        /**/  &kp F5           &kp DE_Y       &kp B    &kp M       &kp CMMA    &kp DOT    &kp J      &mt RCTRL DE_MINUS
                                   &kp K_PP    &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &lt NAV_NUM RET  &lt SYM SPACE  &kp BSPC &kp DEL     &kp RALT
             >;
 
@@ -89,16 +89,16 @@
 
             symbols {
 // -------------------------------------------------------------------------------------------------------------------.
-// |     |  °  |  _  |  [  |  ]  |  ^  |                   |#|                   |   !  |  <  |  >  |  =  |  &  |     |
-// |     |  \  |  /  |  {  |  }  |  *  |                   |#|                   |   ?  |  (  |  )  |  -  |  :  |     |
-// |     |  #  |  $  |  |  |  ~  |  `  |   ---   |   ---   |#|   ---   |   ---   |   +  |  %  |  "  |  '  |  ;  |     |
+// |     |  °  |  _  |  [  |  ]  |  ^  |                   |#|                   |   !  |  <  |  >  |  =  |  &  |  §  |
+// |     |  \  |  /  |  {  |  }  |  *  |                   |#|                   |   ?  |  (  |  )  |  -  |  :  |  @  |
+// |     |  #  |  $  |  |  |  ~  |  `  |   ---   |   ---   |#|   ---   |   ---   |   +  |  %  |  "  |  '  |  ;  |  €  |
 //                   |     |     |HELD |  SPACE  |   ESC   |#|   RET   |  SPACE  |      |  @  |  €  |
 
             bindings = <
-&trans  &kp DE_DEG &kp DE_UNDER &kp DE_LBKT &kp DE_RBKT  &kp DE_CARET                                /**/                                &kp DE_EXCL  &kp DE_LT    &kp DE_GT   &kp DE_EQUAL &kp DE_AMPS  &trans
-&trans  &kp DE_BSLH &kp DE_FSLH &kp DE_LBRC &kp DE_RBRC  &kp DE_STAR                                 /**/                                &kp DE_QMARK &kp DE_LPAR  &kp DE_RPAR &kp DE_MINUS &kp DE_COLON &trans
-&trans  &kp DE_HASH &kp DE_DLLR &kp DE_PIPE &kp DE_TILDE &kp DE_GRAVE   &trans       &trans          /**/  &trans        &trans          &kp DE_PLUS  &kp DE_PRCNT &kp DE_DQT  &kp DE_SQT   &kp DE_SEMI  &trans
-                                &trans      &trans       &trans         &lt FUNC RET &lt FUNC SPACE  /**/  &lt FUNC RET  &lt FUNC SPACE  &lt FUNC ENTER &kp DE_AT  &kp DE_EURO
+&trans  &kp DE_DEG &kp DE_UNDER &kp DE_LBKT &kp DE_RBKT  &kp DE_CARET                                /**/                                &kp DE_EXCL  &kp DE_LT    &kp DE_GT   &kp DE_EQUAL &kp DE_AMPS  &kp DE_SECT
+&trans  &kp DE_BSLH &kp DE_FSLH &kp DE_LBRC &kp DE_RBRC  &kp DE_STAR                                 /**/                                &kp DE_QMARK &kp DE_LPAR  &kp DE_RPAR &kp DE_MINUS &kp DE_COLON &kp DE_AT
+&trans  &kp DE_HASH &kp DE_DLLR &kp DE_PIPE &kp DE_TILDE &kp DE_GRAVE   &mo FUNC     &trans          /**/  &trans        &mo FUNC        &kp DE_PLUS  &kp DE_PRCNT &kp DE_DQT  &kp DE_SQT   &kp DE_SEMI  &kp DE_EURO
+                                &trans      &trans       &trans         &lt FUNC RET &lt FUNC SPACE  /**/  &lt FUNC RET  &lt FUNC SPACE  &trans       &trans       &kp DE_EURO
             >;
         };
 
@@ -107,13 +107,13 @@
 // |     | PgUp | Bksp |  up   |  del  | PgDn|                   |#|                   |   *   |  7   |  8   |   9   |   +   |     |
 // |     | home | left |  down | right | end |                   |#|                   |   /   |  4   |  5   |   6   |  ./:  |     |
 // |     |  esc |  tab |       |       |shift| L SHIFT | L SHIFT |#| L SHIFT | L SHIFT |   0   |  1   |  2   |   3   |  ,/;  |     |
-//                     |       |       |  0  |  SPACE  |   ESC   |#|   RET   |    0    |       |      |  0   |
+//                     |       |       |  0  |  SPACE  |   RET   |#|   RET   |    0    |       |  .   |  0   |
 
             bindings = <
-&trans  &kp PG_UP &kp BSPC  &kp UP     &kp DEL    &kp PG_DN                                    /**/                                &kp DE_STAR   &kp N7  &kp N8   &kp N9  &kp DE_PLUS &trans
-&trans  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                                      /**/                                &kp DE_FSLH   &kp N4  &kp N5   &kp N6  &kp DOT     &trans
-&trans  &kp ESC   &kp TAB   &trans     &trans     &kp LSHFT       &trans       &trans          /**/  &trans        &trans          &kp N0        &kp N1  &kp N2   &kp N3  &kp CMMA     &trans
-                            &trans     &trans     &lt FUNC SPACE  &lt FUNC RET &lt FUNC SPACE  /**/  &lt FUNC RET  &lt FUNC SPACE  &lt FUNC ENTER &trans &kp N0
+&trans  &kp PG_UP &kp BSPC  &kp UP     &kp DEL    &kp PG_DN                                    /**/                                &kp DE_STAR   &kp N7  &kp N8   &kp N9  &kp DE_PLUS &kp DE_MINUS
+&trans  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                                      /**/                                &kp DE_FSLH   &kp N4  &kp N5   &kp N6  &kp DOT     &kp DE_PRCNT
+&trans  &kp ESC   &kp TAB   &none      &none      &kp LSHFT       &mo FUNC     &trans          /**/  &trans        &mo FUNC        &kp N0        &kp N1  &kp N2   &kp N3  &kp CMMA    &trans
+                            &trans     &trans     &lt FUNC SPACE  &lt FUNC SPACE &lt FUNC RET  /**/  &lt FUNC RET  &lt FUNC N0     &trans        &kp DOT &kp N0
             >;
         };
 
@@ -123,13 +123,13 @@
 // |     | sleep|      |bri min| lock  |bri +|                   |#|                   | mute  |  F7  |  F8  |  F9   |  F10  |     |
 // |     |      | prev | play  | next  |bri -|                   |#|                   | vol + |  F4  |  F5  |  F6   |  F11  |     |
 // |     |      |bt_clr|bt_prev| bt_nxt| bt 0|   ---   |   ---   |#|   ---   |   ---   | vol - |  F1  |  F2  |  F3   |  F12  |     |
-//                     |       | play  | next|   ---   |   ---   |#|   ---   |   ---   |       | play | next |
+//                     | vol - | mute  |vol +|   ---   |   ---   |#|   ---   |   ---   |  prev | play | next |
 
             bindings = <
-&trans  &kp K_SLEEP &none   &cp C_BRI_MIN &kp K_LOCK &cp C_BRI_UP                /**/                &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &none    &kp K_PREV &kp K_PP      &kp K_NEXT &cp C_BRI_DN                /**/                &kp K_VOL_UP  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &none    &bt BT_CLR &bt BT_PRV    &bt BT_NXT &bt BT_SEL 0  &trans &trans /**/ &trans &trans  &kp K_VOL_DN  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                            &kp K_PP      &kp K_NEXT &none         &trans &trans /**/ &trans &trans  &none         &kp K_PP &kp K_NEXT
+&none  &kp K_SLEEP &none   &cp C_BRI_MIN &kp K_LOCK &cp C_BRI_UP                /**/                &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none  &none    &kp K_PREV &kp K_PP      &kp K_NEXT &cp C_BRI_DN                /**/                &kp K_VOL_UP  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none  &none    &bt BT_CLR &bt BT_PRV    &bt BT_NXT &bt BT_SEL 0  &none  &none  /**/ &none  &none   &kp K_VOL_DN  &kp F1  &kp F2  &kp F3  &kp F12  &none
+                           &kp K_VOL_DN  &kp K_MUTE &kp K_VOL_UP  &none  &none  /**/ &none  &none   &kp K_PREV    &kp K_PP &kp K_NEXT
             >;
         };
     };
