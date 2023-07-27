@@ -112,7 +112,7 @@
 &none &key_repeat &kp X      &kp C      &lt SYM D   &kp V      &lt FUNC ESC       &kp ESC    /**/  &kp F5        &lt FUNC F5      &kp K     &kp H        &kp COMMA    &kp DOT    &kp DE_MINUS &none
                              &kp K_PP   &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &mt LSHFT RET &mt LSHFT SPACE  &kp BSPC  &kp DEL      &kp LS(DOT)
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp K_NEXT K_PREV>;
+            sensor-bindings = <&inc_dec_kp K_PREV K_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
 
@@ -121,15 +121,15 @@
 // ||  °  |   _ |  [  |  ]  |  ^  |                  |#|                  |   !  |  <  |  >  |  =  |  &  ||
 // ||  \  | /   |  {  |  }  |  *  |                  |#|                  |   ?  |  (  |  )  |  -  |  :  ||
 // ||  #  |  $  |  |  |  ~  |  `  |   FUNC  |   FUNC |#|  FUNC  |   FUNC  |   +  |  %  |  "  |  '  |  ;  ||
-//              |  @  |  €  |     |  SPACE  |   ESC  |#|  RET   |  SPACE  |      |  @  |  €  |
+//              |  @  |  €  |  @  |  SPACE  |   ESC  |#|  RET   |  SPACE  |      |  @  |  €  |
 
             bindings = <
 &none &kp DE_DEG &kp DE_UNDER &kp DE_LBKT &kp DE_RBKT  &kp DE_CARET                                /**/                                &kp DE_EXCL  &kp DE_LT    &kp DE_GT   &kp DE_EQUAL &kp DE_AMPS  &none
 &none &kp DE_BSLH &kp DE_FSLH &kp DE_LBRC &kp DE_RBRC  &kp DE_STAR                                 /**/                                &kp DE_QMARK &kp DE_LPAR  &kp DE_RPAR &kp DE_MINUS &kp DE_COLON &none
 &none &kp DE_HASH &kp DE_DLLR &kp DE_PIPE &kp DE_TILDE &kp DE_GRAVE   &mo FUNC     &mo FUNC        /**/  &mo FUNC      &mo FUNC        &kp DE_PLUS  &kp DE_PRCNT &kp DE_DQT  &kp DE_SQT   &kp DE_SEMI  &none
-                              &kp DE_AT   &kp DE_EURO  &trans         &lt FUNC RET &lt FUNC SPACE  /**/  &lt FUNC RET  &lt FUNC SPACE  &trans       &kp DE_AT       &kp DE_EURO
+                              &kp DE_AT   &kp DE_EURO  &kp DE_AT      &lt FUNC RET &lt FUNC SPACE  /**/  &lt FUNC RET  &lt FUNC SPACE  &trans       &kp DE_AT       &kp DE_EURO
             >;
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP C_AC_SCROLL_DOWN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         nav_num {
