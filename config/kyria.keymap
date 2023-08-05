@@ -20,6 +20,19 @@
 #define FUNC 3
 // #define NAV_VIM 5
 
+&left_encoder {
+    steps = <48>;
+};
+
+&right_encoder {
+    steps = <48>;
+};
+
+
+// &left_encoder  { resolution = <32>; };  // does nothing
+// &right_encoder { resolution = <32>; };
+
+
 // Behavior configuration
 &mt {
     tapping-term-ms = <200>;
@@ -52,49 +65,56 @@
     combos {
         compatible = "zmk,combos";
         combo_tab {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <15 16>;
             layers = <0>;
             bindings = <&kp TAB>;
         };
         combo_ae {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <13 14>;
             layers = <0>;
             bindings = <&kp DE_AE>;
         };
         combo_ue {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <8 9>;
             layers = <0>;
             bindings = <&kp DE_UE>;
         };
         combo_oe {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <21 22>;
             layers = <0>;
             bindings = <&kp DE_OE>;
         };
         combo_ss {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <14 15>;
             layers = <0>;
             bindings = <&kp DE_SS>;
         };
         combo_mins {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
+            timeout-ms = <30>;
+            key-positions = <20 21>;
             layers = <0>;
             bindings = <&kp DE_MINUS>;
         };
         combo_unds {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
+            timeout-ms = <30>;
+            key-positions = <19 20>;
             layers = <0>;
             bindings = <&kp DE_UNDER>;
         };
 
     };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <12>;
+    };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -112,7 +132,7 @@
 &none &key_repeat &kp X      &kp C      &lt SYM D   &kp V      &lt FUNC ESC       &kp ESC    /**/  &kp F5        &lt FUNC F5      &kp K     &kp H        &kp COMMA    &kp DOT    &kp DE_MINUS &none
                              &kp K_PP   &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &mt LSHFT RET &mt LSHFT SPACE  &kp BSPC  &kp DEL      &kp LS(DOT)
             >;
-            sensor-bindings = <&inc_dec_kp K_PREV K_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp K_PREV K_NEXT &inc_dec_kp K_VOL_DN K_VOL_UP>;
         };
 
 
@@ -129,7 +149,7 @@
 &none &kp DE_HASH &kp DE_DLLR &kp DE_PIPE &kp DE_TILDE &kp DE_GRAVE   &mo FUNC     &mo FUNC        /**/  &mo FUNC      &mo FUNC        &kp DE_PLUS  &kp DE_PRCNT &kp DE_DQT  &kp DE_SQT   &kp DE_SEMI  &none
                               &kp DE_AT   &kp DE_EURO  &kp DE_AT      &lt FUNC RET &lt FUNC SPACE  /**/  &lt FUNC RET  &lt FUNC SPACE  &trans       &kp DE_AT       &kp DE_EURO
             >;
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         nav_num {
@@ -145,6 +165,7 @@
 &none &kp ESC   &kp TAB   &none      &none      &kp LSHFT       &mo FUNC       &mo FUNC      /**/  &mo FUNC      &mo FUNC        &kp N0        &kp N1  &kp N2   &kp N3  &kp CMMA    &none
                           &trans     &trans     &lt FUNC SPACE  &lt FUNC SPACE &lt FUNC RET  /**/  &lt FUNC RET  &lt FUNC N0     &trans        &kp DOT &kp N0
             >;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LEFT RIGHT>;
         };
 
 
@@ -161,6 +182,7 @@
 &none &none         &bt BT_CLR  &bt BT_PRV    &bt BT_NXT &bt BT_SEL 0  &none  &none  /**/ &none  &none   &kp K_VOL_DN  &kp F1  &kp F2  &kp F3  &kp F12  &none
                                 &kp K_VOL_DN  &kp K_MUTE &kp K_VOL_UP  &none  &none  /**/ &none  &none   &kp K_PREV    &kp K_PP &kp K_NEXT
             >;
+            sensor-bindings = <&inc_dec_cp C_BRI_DN C_BRI_UP &inc_dec_kp K_VOL_DN K_VOL_UP>;
         };
     };
 };
