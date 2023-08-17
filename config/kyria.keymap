@@ -21,27 +21,23 @@
 // #define NAV_VIM 5
 
 &left_encoder {
+    status = "okay";
     steps = <48>;
 };
 
 &right_encoder {
+    status = "okay";
     steps = <48>;
 };
 
 
-// &left_encoder  { resolution = <32>; };  // does nothing
-// &right_encoder { resolution = <32>; };
-
-
 // Behavior configuration
 &mt {
-    tapping-term-ms = <200>;
-    quick_tap_ms = <0>;
+    tapping-term-ms = <150>;
     flavor = "tap-preferred";
 };
 &lt {
-    tapping-term-ms = <200>;
-    quick_tap_ms = <0>;
+    tapping-term-ms = <150>;
     flavor = "tap-preferred";
 };
 &sk {
@@ -67,7 +63,7 @@
         combo_tab {
             timeout-ms = <30>;
             key-positions = <15 16>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&kp TAB>;
         };
         combo_ae {
@@ -97,14 +93,20 @@
         combo_mins {
             timeout-ms = <30>;
             key-positions = <20 21>;
-            layers = <0>;
+            layers = <0 1 2>;
             bindings = <&kp DE_MINUS>;
         };
         combo_unds {
             timeout-ms = <30>;
             key-positions = <19 20>;
-            layers = <0>;
+            layers = <0 1 2>;
             bindings = <&kp DE_UNDER>;
+        };
+        combo_at {
+            timeout-ms = <30>;
+            key-positions = <31 32>;
+            layers = <1 2>;
+            bindings = <&kp DE_AT>;
         };
 
     };
@@ -127,10 +129,10 @@
 // ||repeat|   X  |   C   |   D   |  V   |FUNC/ESC |  ESC    |#|    F5   | FUNC/F5 |  K   |   H   |  ,    |  .   |  - _  ||
 //                | Play  | LGUI  | LALT | RET/sym |SPACE/num|#| RET/SFT |SPACE/SFT| BSPC | DEL   |   :   |
             bindings = <
-&none &kp Q       &kp W      &kp F      &kp P       &kp B                                    /**/                                 &kp J     &kp L        &kp U        &kp DE_Y   &kp DE_Z     &none
-&none &mt LSHFT A &mt LGUI R &mt LALT S &mt LCTRL T &lt NAV_NUM G                            /**/                                 &kp M     &mt LCTRL N  &mt LALT E   &mt LGUI I &mt LSHFT O  &none
-&none &key_repeat &kp X      &kp C      &lt SYM D   &kp V      &lt FUNC ESC       &kp ESC    /**/  &kp F5        &lt FUNC F5      &kp K     &kp H        &kp COMMA    &kp DOT    &kp DE_MINUS &none
-                             &kp K_PP   &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &mt LSHFT RET &mt LSHFT SPACE  &kp BSPC  &kp DEL      &kp LS(DOT)
+&none &kp Q       &kp W      &kp F      &kp P       &kp B                                    /**/                                 &kp J         &kp L        &kp U        &kp DE_Y   &kp DE_Z     &none
+&none &mt LSHFT A &mt LGUI R &mt LALT S &mt LCTRL T &lt NAV_NUM G                            /**/                                 &lt NAV_NUM M &mt LCTRL N  &mt LALT E   &mt LGUI I &mt LSHFT O  &none
+&none &key_repeat &kp X      &kp C      &lt SYM D   &kp V      &lt FUNC ESC       &kp ESC    /**/  &kp F5        &lt FUNC F5      &kp K         &kp H        &kp COMMA    &kp DOT    &kp DE_MINUS &none
+                             &kp K_PP   &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &mt LSHFT RET &mt LSHFT SPACE  &kp BSPC      &kp DEL      &kp LS(DOT)
             >;
             sensor-bindings = <&inc_dec_kp K_PREV K_NEXT &inc_dec_kp K_VOL_DN K_VOL_UP>;
         };
