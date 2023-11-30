@@ -33,11 +33,11 @@
 
 // Behavior configuration
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <175>;
     flavor = "tap-preferred";
 };
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <175>;
     flavor = "tap-preferred";
 };
 &sk {
