@@ -16,7 +16,7 @@
 #include "keymap-german-rev3.h"
 
 // Layer Definitions
-#define QWERTY 0
+#define QWERTZ 0
 #define NEO 1
 #define SYM 2
 #define NAV_NUM 3
