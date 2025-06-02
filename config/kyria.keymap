@@ -179,8 +179,8 @@
 //                 | mute  | vol - |vol +|   ---   |   ---   |#|   ---   |   ---   |  prev | next | play |
 
       bindings = <
-&none &kp K_SLEEP   &kp K_SLEEP &cp C_BRI_MIN &kp K_LOCK &cp C_BRI_UP                /**/                &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none &kp C_AL_LOCK &kp K_PREV  &kp K_PP      &kp K_NEXT &cp C_BRI_DN                /**/                &kp K_VOL_UP  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none &kp K_SLEEP   &kp K_SLEEP &kp C_BRI_MIN &kp K_LOCK &kp C_BRI_UP                /**/                &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none &kp C_AL_LOCK &kp K_PREV  &kp K_PP      &kp K_NEXT &kp C_BRI_DN                /**/                &kp K_VOL_UP  &kp F4  &kp F5  &kp F6  &kp F11  &none
 &none &none         &bt BT_CLR  &bt BT_PRV    &bt BT_NXT &bt BT_SEL 0  &none  &none  /**/ &none  &none   &kp K_VOL_DN  &kp F1  &kp F2  &kp F3  &kp F12  &none
                                 &kp K_MUTE  &kp K_VOL_DN &kp K_VOL_UP  &none  &none  /**/ &none  &none   &kp K_PREV    &kp K_NEXT &kp K_PP
             >;
