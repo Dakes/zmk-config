@@ -1,0 +1,6 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &kyria_matrix_transform_right;
+    };
+};
