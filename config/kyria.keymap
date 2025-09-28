@@ -112,13 +112,8 @@
     };
 
     sensors {
-    compatible = "zmk,keymap-sensors";
-    sensors = <&left_encoder &right_encoder>;
-    labels = "ENC_LEFT", "ENC_RIGHT";
-    left_config: left_encoder_config {
-        triggers-per-rotation = <12>;
-    };
-    right_config: right_encoder_config {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <12>;
     };
 };
@@ -140,7 +135,7 @@
 &none &key_repeat &kp X      &kp C      &lt SYM D   &kp V      &lt FUNC ESC       &kp ESC    /**/  &kp F5        &lt FUNC F5      &kp K         &kp H        &kp COMMA    &kp DOT    &kp DE_MINUS &none
                              &kp K_PP   &kp LGUI    &kp LALT   &lt SYM SPACE &lt NAV_NUM RET /**/  &mt LSHFT RET &mt LSHFT SPACE  &kp BSPC      &kp DEL      &kp LS(DOT)
             >;
-            sensor-bindings = <&inc_dec_kp K_PREV K_NEXT ENC_LEFT &inc_dec_kp K_VOL_DN K_VOL_UP ENC_RIGHT>;
+            sensor-bindings = <&inc_dec_kp K_PREV K_NEXT &inc_dec_kp K_VOL_DN K_VOL_UP>;
         };
 
 
