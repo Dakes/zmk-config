@@ -116,7 +116,6 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <12>;
     };
-};
 
 
     keymap {
